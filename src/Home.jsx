@@ -103,12 +103,13 @@ function Home({ setSelectedMediaType,setAudioEnabled }) {
           <p>**Only Audio Recording is not Available</p>
         </div>
       </div>
-      </div>
       <footer className="footer bg-gray-800 text-white text-center py-4">
         <Button variant="contained" color="secondary" onClick={handleLogout}>
           Logout
         </Button>
       </footer>
+      </div>
+     
     </div>
   );
 }

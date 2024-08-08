@@ -16,7 +16,6 @@ const Intro =({ setSelectedMediaType, setAudioEnabled }) =>{
                 const res = await authService.getCurrentUser();
                 setUser(res);
             } catch (e) {
-                setError("Failed to fetch user data.");
                 console.error(e); 
             } finally {
                 setLoading(false);
