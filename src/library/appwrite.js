@@ -101,6 +101,28 @@ export class AuthService {
             throw error;
         }
     }
+    async recoverPassword(email){
+        try{
+            await this.account.createRecovery(email,conf.redirectUrl);
+            console.log("Recovery email sent successfully.");
+        }
+        catch(error)
+        {
+            console.error("Error sending recovery email:", error);
+            throw error;
+        }
+    }
+    async updateRecovery(userId,secret,newPassword,confirmPassword)
+    {
+         try{
+            const response = await this.account.updateRecovery(userId, secret, newPassword, confirmPassword);
+            console.log('Password updated successfully:', response);
+         }
+         catch(error){
+            console.error('Failed to update password:', error);
+            throw error;
+         }
+    }
     async getCurrentUser() {
         try {
             const user = await this.account.get();
