@@ -103,6 +103,7 @@ export class AuthService {
     }
     async recoverPassword(email){
         try{
+            console.log('Mode:', import.meta.env.MODE);
             console.log('Redirect URL for Password Recovery:', conf.redirectUrl);
             await this.account.createRecovery(email,conf.redirectUrl);
             console.log("Recovery email sent successfully.");
