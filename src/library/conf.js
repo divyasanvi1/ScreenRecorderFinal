@@ -1,9 +1,9 @@
 
 const conf = {
-    appwriteUrl: process.env.REACT_APP_APPWRITE_URL, 
-    appwriteProjectId: process.env.REACT_APP_APPWRITE_PROJECT_ID,
-    databaseId: process.env.REACT_APP_DATABASE_ID, 
-    collectionId: process.env.REACT_APP_COLLECTION_ID,
-    apiKey: process.env.REACT_APP_API_KEY,
+    appwriteUrl: String(import.meta.env.VITE_APPWRITE_URL),
+    appwriteProjectId:String(import.meta.env.VITE_APPWRITE_PROJECT_ID),
+    databaseId: String(import.meta.env.VITE_APPWRITE_DATABASE_ID),
+    collectionId: String(import.meta.env.VITE_APPWRITE_COLLECTION_ID),
+    apiKey:String(import.meta.env.VITE_APPWRITE_API_KEY),
 }
 export default conf;
