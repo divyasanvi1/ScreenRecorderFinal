@@ -22,7 +22,7 @@ const Recover=()=>{
           alert('Password updated successfully!');
        }
        catch(error){
-        console.error('Failed to update password:', error);
+        console.log('Failed to update password:', error);
         alert('Error updating password. Please try again.');
        }
     }
