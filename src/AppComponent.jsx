@@ -6,6 +6,8 @@ import Button from '@mui/material/Button';
 import bgImage from "./bg.jpg";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+
 const Container = styled("div")({
   display: "flex",
   justifyContent: "center",
@@ -14,6 +16,7 @@ const Container = styled("div")({
   
   height: "100vh",
 });
+
 const VideoContainer = styled("div")({
   width: "900px",
   paddingTop: "395px", // 16:9 aspect ratio
@@ -22,13 +25,16 @@ const VideoContainer = styled("div")({
   
   backgroundColor: "rgba(173, 216, 230, 0.3)"
 });
+
 const VideoElement = styled("video")({
   position: "absolute",
   width: "100%",
   height: "100%",
   top: 0,
   left: 0,
+  preload: "auto", 
 });
+
 function AppComponent({ selectedMediaType,audioEnabled }) {
   const [mediaStream, setMediaStream] = useState(null);
   const [recording, setRecording] = useState(false);
@@ -97,6 +103,7 @@ function AppComponent({ selectedMediaType,audioEnabled }) {
         })
         .catch((error) => {
           console.error("Error accessing screen:", error);
+          setErrorMessage("Unable to access the screen. Please check your browser settings.");
         });
     }
     else if (selectedMediaType === "screen" && audioEnabled===false ) {
@@ -109,6 +116,7 @@ function AppComponent({ selectedMediaType,audioEnabled }) {
         })
         .catch((error) => {
           console.error("Error accessing screen:", error);
+          setErrorMessage("Unable to access the screen. Please check your browser settings.");
         });
     } 
   }, [selectedMediaType, audioEnabled]);
@@ -136,6 +144,7 @@ function AppComponent({ selectedMediaType,audioEnabled }) {
     }
   }, [mediaStream]);
 
+  
   return (
     <>
       <ReactMediaRecorder
