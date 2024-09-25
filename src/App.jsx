@@ -10,7 +10,8 @@ import NotFound from './pages/Notfound.jsx';
 import Intro from './pages/Intro.jsx';
 import {AuthProvider} from './AuthProvider.jsx'
 import ProtectedRoute from './ProtectedRoute.jsx'
-
+import Forget from './password/Forget.jsx'
+import Recover from './password/Recover.jsx'
 
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
           />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<Forget/>} />
+          <Route path="/reset-password" element={<Recover />} />
           <Route
             path="/home"
             element={

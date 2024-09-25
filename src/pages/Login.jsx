@@ -52,6 +52,9 @@ const Login =() =>{
                <p>
                   Don't have an account? <Link to="/signup">Register</Link>
                </p>
+               <p>
+                <Link to="/forgot-password">Forgot password?</Link>
+               </p>
                <button type="submit" className="submit-btn">
                 {loading?"...": "LOGIN"}
                 </button>

@@ -15,7 +15,7 @@ const Forget=()=>{
         }
       };
     return( 
-        <forrm onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <input 
            type="email"
            value={email}
@@ -24,7 +24,7 @@ const Forget=()=>{
            required
           />
           <button type="submit">Send Recovery Email</button>
-        </forrm>
+        </form>
     );
 };
 
