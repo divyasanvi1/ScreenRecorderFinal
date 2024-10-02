@@ -275,6 +275,12 @@ const handleMediaUpload = async (mediaBlobUrl) => {
               <Button variant="contained" onClick={handleButtonClick}>
                     GOOGLE SIGN IN
                   </Button>
+                  <Button
+                variant="contained"
+                onClick={() => window.location.href = 'https://screenrecorderfinal-1.onrender.com/'}
+              >
+                Home
+              </Button>
                 {status==="idle" && (
                   <button
                     onClick={() => {
