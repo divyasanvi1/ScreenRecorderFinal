@@ -12,7 +12,8 @@ import {AuthProvider} from './AuthProvider.jsx'
 import ProtectedRoute from './ProtectedRoute.jsx'
 import Forget from './password/Forget.jsx'
 import Recover from './password/Recover.jsx'
-
+import AboutUs from './pages/About.jsx';
+import ContactUs from './pages/Contact.jsx';
 
 function App() {
   const [selectedMediaType, setSelectedMediaType] = useState('video');
@@ -36,6 +37,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/forgot-password" element={<Forget/>} />
           <Route path="/reset-password" element={<Recover />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route
             path="/home"
             element={

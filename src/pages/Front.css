@@ -227,3 +227,60 @@
         display: none; /* Hide About and Contact links on smaller screens */
     }
 }
+
+.contact {
+    background-image: url('./Images/Intro1.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    display: flex; /* Enable flexbox on the parent */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+}
+
+.contact::before {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute; /* Absolutely position it */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Position it above the background but below the content */
+}
+
+.block-contact {
+    position: relative; /* Positioning context for its children */
+    z-index: 2; /* Position it above the overlay */
+    text-align: center; /* Center the text */
+    color: black; /* Change text color for better visibility */
+    padding: 40px; /* Add more padding for better spacing */
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly more opaque background */
+    border-radius: 10px;
+    max-width: 500px; /* Limit the width of the block */
+    width: 90%; /* Make it responsive */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+
+
+
+.contact-info {
+    font-size: 1.2rem; /* Adjust font size for contact info */
+    margin-bottom: 20px; /* Space below contact info */
+}
+
+.email-button {
+    display: inline-block; /* Make it behave like a button */
+    background-color: #007bff; /* Initial blue background */
+    color: white; /* Text color */
+    padding: 12px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    font-size: 1rem; /* Adjust font size for button */
+}
+
+.email-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
