@@ -46,8 +46,6 @@ export const AuthProvider = ({ children }) => {
         try {
             await authService.logout();
             setUser(null);
-            localStorage.removeItem('accessToken'); // Clear stored access token
-            localStorage.removeItem('userEmail'); 
             navigate('/login');
         } catch (error) {
             if (error.code === 401) {
