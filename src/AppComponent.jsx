@@ -179,23 +179,26 @@ const handleButtonClick = () => {
 
 // Handle the redirect after authentication
 useEffect(() => {
+  console.log("useEffect triggered, checking URL hash...");
   const hash = window.location.hash;
+  
   if (hash) {
+    console.log("Hash found:", hash);  // Debug the full URL hash
     const params = new URLSearchParams(hash.substring(1));
     const Token = params.get('access_token');
     
     if (Token) {
-      setAccessToken(Token);
-      console.log("Access Token:", accessToken);
-      // Here, you can store the access token and use it for file uploads
-      // For example, you could call your handleDriveUpload function here
+      setAccessToken(Token);  // Set the token in state
+      console.log("Access Token:", Token);  // Confirm token retrieval
+    } else {
+      console.log("Access token not found in hash.");
+      toast.error('No access token found.');
     }
-    else
-    {
-      toast.error('Upload failed.');
-    }
+  } else {
+    console.log("No URL hash present.");
   }
 }, []);
+
 
 
 
