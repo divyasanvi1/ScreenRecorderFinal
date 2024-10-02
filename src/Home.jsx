@@ -13,29 +13,21 @@ import  {useAuth} from './AuthProvider';
 
 
 function Home({ setSelectedMediaType,setAudioEnabled }) {
-  const [selectedOption, setSelectedOption] = useState(() => {
-    return localStorage.getItem("selectedOption") || "video";
-  });
+  const [selectedOption, setSelectedOption] = useState('video');
 
-  const [selectAudio, setSelectedAudio] = useState(() => {
-    return localStorage.getItem("selectAudio") === "true";
-  });
-
-
-
+  const [selectAudio, setSelectedAudio] = useState('false');
+  
 
   const [isMobile, setIsMobile] = useState(false);
   const handleOptionChange = (event) => {
     console.log(event);
     setSelectedOption(event.target.value);
     setSelectedMediaType(event.target.value);
-    localStorage.setItem("selectedOption", event.target.value);
+    
   };
  const handleAudio=()=>{
       setSelectedAudio(!selectAudio);
       setAudioEnabled(!selectAudio); 
-      const newAudioState = !selectAudio;
-      localStorage.setItem("selectAudio", newAudioState);
  };
 
  const navigate=useNavigate();
@@ -52,15 +44,7 @@ function Home({ setSelectedMediaType,setAudioEnabled }) {
 };
 
 
-useEffect(() => {
-  // Check for saved media option in localStorage
-  const savedOption = localStorage.getItem("selectedOption");
-  if (savedOption) {
-    setSelectedOption(savedOption);
-    setSelectedMediaType(savedOption); // Update the parent state if necessary
-  }
 
-}, [setSelectedMediaType]);
 
 
 useEffect(() => {

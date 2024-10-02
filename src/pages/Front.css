@@ -221,3 +221,9 @@
     border-radius: 0.25rem;
     word-wrap: break-word;
   }
+
+  @media (max-width: 768px) {
+    .nav-link {
+        display: none; /* Hide About and Contact links on smaller screens */
+    }
+}
