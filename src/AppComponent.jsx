@@ -170,7 +170,8 @@ useEffect(() => {
 }, []);
 
 // Handle authentication click
-const handleButtonClick = () => {
+const handleButtonClick = (e) => {
+  e.preventDefault();
   const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${conf.googleclientid}&redirect_uri=${encodeURIComponent("https://screenrecorderfinal-1.onrender.com/app")}&response_type=token&scope=${encodeURIComponent("https://www.googleapis.com/auth/drive.file")}`;
 
   
