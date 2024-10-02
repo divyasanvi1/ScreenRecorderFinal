@@ -233,7 +233,6 @@ const handleMediaUpload = async (mediaBlobUrl) => {
       const response = await fetch(mediaBlobUrl);
       const blob = await response.blob();
       handleDriveUpload(blob);
-      setAccessToken(null);
     } catch (error) {
       console.error('Error fetching mediaBlobUrl:', error);
     }
