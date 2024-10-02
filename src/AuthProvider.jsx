@@ -46,6 +46,7 @@ export const AuthProvider = ({ children }) => {
         try {
             await authService.logout();
             setUser(null);
+            //localStorage.removeItem('accessToken');
             navigate('/login');
         } catch (error) {
             if (error.code === 401) {
