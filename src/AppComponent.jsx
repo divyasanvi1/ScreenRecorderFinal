@@ -198,14 +198,7 @@ useEffect(() => {
 }, []);
 
 
-useEffect(() => {
-  if (accessToken) {
-      console.log("Access Token:", accessToken);
-      setAccessToken(Token);
-      // Now you can use the accessToken for file uploads or any other logic
-      // For example, call your handleDriveUpload function here if needed
-  }
-}, [accessToken]);
+
 // Google Drive upload function
 const handleDriveUpload = async (file) => {
   try {// Get access token
