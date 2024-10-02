@@ -39,7 +39,7 @@ function Home({ setSelectedMediaType,setAudioEnabled }) {
 
 
   return (
-    <div className="flex flex-col min-h-screen bg-image">
+    <div className="background-home">
       <div className="flex-grow flex flex-col items-center justify-center">
       <div className="flex flex-col  items-center second-div h-80% w-70%">
         <h1 className="text-white text-5xl border-b-4 border-grey-300">

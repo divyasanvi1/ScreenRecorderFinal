@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../AuthProvider';
+import "./Front.css"
 const Signup = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -27,7 +28,8 @@ const Signup = () => {
     };
 
     return (
-        <div className="background">
+        <div className="background-signup">
+            <div className="block-signup">
             <h1>Create an account</h1>
             <form className="form" onSubmit={handleRegistration}>
                 <label>Full Name</label>
@@ -67,6 +69,7 @@ const Signup = () => {
                     </button>
                 </div>
             </form>
+            </div>
         </div>
     );
 };

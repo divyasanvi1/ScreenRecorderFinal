@@ -1,14 +1,18 @@
-.bg-image {
-    background-image: url('./bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.background-intro{
+  background-image:url('./Images/Intro1.jpg');
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  display: flex; /* Enable flexbox on the parent */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: relative;
 }
 .second-div  {
    /* background-image: url('./pexels-juanpphotoandvideo-1242348.jpg');*/
     height: 70%;
     width: 80%;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.3); 
   }
   body {
     font-family: 'RocknRoll One', sans-serif;

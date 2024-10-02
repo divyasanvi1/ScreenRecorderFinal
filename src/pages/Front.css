@@ -121,3 +121,103 @@
     cursor: pointer; /* Pointer cursor on hover */
     transition: background-color 0.3s; /* Smooth transition for background color */
 }
+ 
+.background-signup{
+    background-image:url('./Images/Intro1.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    display: flex; /* Enable flexbox on the parent */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+}
+
+.background-signup::before {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute; /* Absolutely position it */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Position it above the background but below the content */
+}
+
+.block-signup{
+    position: relative; /* Positioning context for its children */
+    z-index: 2; /* Position it above the overlay */
+    text-align: center; /* Center the text */
+    color: black; /* Change text color for better visibility against the white overlay */
+    padding: 20px; /* Add some padding around the block */
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+}
+
+.background-signup .form {
+    width: 100%; /* 100% width to make the form flexible */
+    max-width: 500px; /* Max width for larger screens */
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 3vw; /* Use relative padding for responsiveness */
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto; /* Center the form horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form input {
+    min-height: auto;
+    padding: 12px; /* Larger padding for input fields */
+    border: 1px solid black;
+    background: transparent;
+    transition: all 0.2s linear;
+    display: block;
+    width: 100%;
+    font-size: 1.1rem; /* Slightly larger font */
+    font-weight: 400;
+    line-height: 1.6;
+    color: black ;
+    appearance: none;
+    border-radius: 0.25rem;
+}
+.form label {
+    margin-bottom: 3px;
+    color: black;
+  }
+  .form .submit-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .submit-div p {
+    color: black;
+  }
+  .submit-div p a {
+    color: #007bff;
+  }
+  .submit-div .submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    width: fit-content;
+  }
+
+  .error-msg {
+    width: 100%;
+    background-color: #007bff;;
+    font-size: 12px;
+    color:white;
+    padding: 0.75rem 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    word-wrap: break-word;
+  }

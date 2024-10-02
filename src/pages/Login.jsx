@@ -30,7 +30,8 @@ const Login =() =>{
      };
 
     return (
-        <div className="background">
+        <div className="background-signup">
+          <div className="block-signup">
              <h1>Login!!!</h1>
             <form className="form" onSubmit={handleLogin}>
               <label>Email</label>
@@ -60,6 +61,7 @@ const Login =() =>{
                 </button>
               </div>
             </form>
+            </div>
         </div>
     )
 }
