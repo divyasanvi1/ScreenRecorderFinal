@@ -30,7 +30,7 @@
     border-radius: 10px;
     display: flex; /* Enable flexbox for the input and button */
     flex-direction: column; /* Stack them vertically */
-    gap: 10px; /* Space between input and button */
+    gap: 20px; /* Space between inputs and buttons */
     max-width: 400px; /* Limit the width of the block */
     width: 100%; /* Make it responsive */
 }
@@ -41,7 +41,7 @@ input {
     border: 1px solid #ccc; /* Border color */
     border-radius: 5px; /* Rounded corners */
     box-sizing: border-box; /* Include padding in width */
-    margin-bottom:0 ; /* Remove bottom margin */
+    margin: 0; /* Remove margin */
 }
 
 .sub {

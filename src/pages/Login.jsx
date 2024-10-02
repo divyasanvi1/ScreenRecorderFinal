@@ -56,9 +56,10 @@ const Login =() =>{
                <p>
                 <Link to="/forgot-password">Forgot password?</Link>
                </p>
-               <button type="submit" className="submit-btn">
+               <button type="submit" className="submit-btn" style={{ marginTop: '10px' }}>
                 {loading?"...": "LOGIN"}
                 </button>
+                <button className="submit-btn" style={{ marginTop: '10px' }} onClick={() => navigate("/")}>GO to Home ➤</button>
               </div>
             </form>
             </div>
