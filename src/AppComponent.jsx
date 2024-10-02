@@ -171,7 +171,8 @@ useEffect(() => {
 
 // Handle authentication click
 const handleButtonClick = () => {
-  const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${conf.googleclientid}&redirect_uri=https://screenrecorderfinal-1.onrender.com/app&response_type=token&scope=https://www.googleapis.com/auth/drive.file`;
+  const authUrl = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${import.meta.env.VITE_GOOGLE_CLIENT_ID}&redirect_uri=${encodeURIComponent("https://screenrecorderfinal-1.onrender.com/app")}&response_type=token&scope=${encodeURIComponent("https://www.googleapis.com/auth/drive.file")}`;
+
   
   window.location.href = authUrl; // Redirect to Google's OAuth 2.0 authorization endpoint
 };
