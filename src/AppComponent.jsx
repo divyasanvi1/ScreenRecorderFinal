@@ -183,15 +183,29 @@ useEffect(() => {
   if (hash) {
     const params = new URLSearchParams(hash.substring(1));
     const Token = params.get('access_token');
-    setAccessToken(Token);
-    if (accessToken) {
+    
+    if (Token) {
+      setAccessToken(Token);
       console.log("Access Token:", accessToken);
       // Here, you can store the access token and use it for file uploads
       // For example, you could call your handleDriveUpload function here
     }
+    else
+    {
+      toast.error('Upload failed.');
+    }
   }
 }, []);
 
+
+useEffect(() => {
+  if (accessToken) {
+      console.log("Access Token:", accessToken);
+      setAccessToken(Token);
+      // Now you can use the accessToken for file uploads or any other logic
+      // For example, call your handleDriveUpload function here if needed
+  }
+}, [accessToken]);
 // Google Drive upload function
 const handleDriveUpload = async (file) => {
   try {// Get access token
