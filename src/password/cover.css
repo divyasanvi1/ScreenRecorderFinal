@@ -1,0 +1,65 @@
+.forgot {
+    background-image: url('../pages/Images/Intro1.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    display: flex; /* Enable flexbox on the parent */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+}
+
+.forgot::before {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute; /* Absolutely position it */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Position it above the background but below the content */
+}
+
+.block-forget {
+    position: relative; /* Positioning context for its children */
+    z-index: 2; /* Position it above the overlay */
+    text-align: center; /* Center the text */
+    color: black; /* Change text color for better visibility against the white overlay */
+    padding: 20px; /* Add some padding around the block */
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    display: flex; /* Enable flexbox for the input and button */
+    flex-direction: column; /* Stack them vertically */
+    gap: 10px; /* Space between input and button */
+    max-width: 400px; /* Limit the width of the block */
+    width: 100%; /* Make it responsive */
+}
+
+input {
+    width: 100%; /* Full width */
+    padding: 15px; /* Increased padding for input */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width */
+    margin-bottom:0 ; /* Remove bottom margin */
+}
+
+.sub {
+    background-color: #007bff; /* Initial blue background */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 12px; /* Match button padding with input */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    width: 100%; /* Full width */
+}
+
+.sub:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+input::placeholder {
+    color: black; /* Dark gray color for the placeholder */
+    opacity: 1; /* Ensures the placeholder is fully opaque */
+}

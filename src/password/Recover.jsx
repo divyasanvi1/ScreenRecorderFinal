@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { authService } from '../library/appwrite'
-
+import "./cover.css";
 const Recover=()=>{
     const [newPassword,setNewPassword]=useState('');
     const [confirmPassword,setConfirmPassword]=useState('');
@@ -27,7 +27,8 @@ const Recover=()=>{
        }
     }
     return (
-     <div className="recover-container">
+     <div className="forgot">
+      <div className="block-forget">
         <form onSubmit={handleSubmit} className="form">
             <input
              type="password"
@@ -43,8 +44,9 @@ const Recover=()=>{
              placeholder="Enter confirm Password"
              required
             />
-            <button type="submit">Set Password</button>
+            <button className="sub" type="submit">Set Password</button>
         </form>
+        </div>
      </div>
     );
 };
