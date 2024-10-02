@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./App.css";
 import Button from "@mui/material/Button";
 import GraphicEqIcon from "@mui/icons-material/GraphicEq";
@@ -15,6 +15,7 @@ import  {useAuth} from './AuthProvider';
 function Home({ setSelectedMediaType,setAudioEnabled }) {
   const [selectedOption, setSelectedOption] = useState("video");
   const [selectAudio, setSelectedAudio]=useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const handleOptionChange = (event) => {
     console.log(event);
     setSelectedOption(event.target.value);
@@ -38,6 +39,14 @@ function Home({ setSelectedMediaType,setAudioEnabled }) {
   }
 };
 
+useEffect(() => {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  if (/android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent)) {
+    setIsMobile(true); // Set mobile flag if user is on a mobile device
+  } else {
+    setIsMobile(false); // Set desktop flag
+  }
+}, []);
 
   return (
     <div className="background-home">
@@ -83,6 +92,7 @@ function Home({ setSelectedMediaType,setAudioEnabled }) {
               value="screen"
               onChange={handleOptionChange}
               inputProps={{ "aria-label": "controlled" }}
+              disabled={isMobile}
             />
           </div>
           <div className="setting-item">
