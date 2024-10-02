@@ -15,7 +15,7 @@ import  {useAuth} from './AuthProvider';
 function Home({ setSelectedMediaType,setAudioEnabled }) {
   const [selectedOption, setSelectedOption] = useState('video');
 
-  const [selectAudio, setSelectedAudio] = useState('false');
+  const [selectAudio, setSelectedAudio] = useState(false);
   
 
   const [isMobile, setIsMobile] = useState(false);
