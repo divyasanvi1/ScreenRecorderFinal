@@ -13,17 +13,29 @@ import  {useAuth} from './AuthProvider';
 
 
 function Home({ setSelectedMediaType,setAudioEnabled }) {
-  const [selectedOption, setSelectedOption] = useState("video");
-  const [selectAudio, setSelectedAudio]=useState(false);
+  const [selectedOption, setSelectedOption] = useState(() => {
+    return localStorage.getItem("selectedOption") || "video";
+  });
+
+  const [selectAudio, setSelectedAudio] = useState(() => {
+    return localStorage.getItem("selectAudio") === "true";
+  });
+
+
+
+
   const [isMobile, setIsMobile] = useState(false);
   const handleOptionChange = (event) => {
     console.log(event);
     setSelectedOption(event.target.value);
     setSelectedMediaType(event.target.value);
+    localStorage.setItem("selectedOption", event.target.value);
   };
  const handleAudio=()=>{
       setSelectedAudio(!selectAudio);
       setAudioEnabled(!selectAudio); 
+      const newAudioState = !selectAudio;
+      localStorage.setItem("selectAudio", newAudioState);
  };
 
  const navigate=useNavigate();
@@ -38,6 +50,18 @@ function Home({ setSelectedMediaType,setAudioEnabled }) {
     console.error('Logout failed:', err);
   }
 };
+
+
+useEffect(() => {
+  // Check for saved media option in localStorage
+  const savedOption = localStorage.getItem("selectedOption");
+  if (savedOption) {
+    setSelectedOption(savedOption);
+    setSelectedMediaType(savedOption); // Update the parent state if necessary
+  }
+
+}, [setSelectedMediaType]);
+
 
 useEffect(() => {
   const userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -83,6 +107,7 @@ useEffect(() => {
               value="video"
               onChange={handleOptionChange}
               inputProps={{ "aria-label": "controlled" }}
+              disabled={isMobile}
             />
           </div>
           <div className="setting-item">

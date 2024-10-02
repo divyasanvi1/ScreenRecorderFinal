@@ -271,8 +271,10 @@ const handleMediaUpload = async (mediaBlobUrl) => {
                 )}
               </VideoContainer>
                
-              <div className="flex justify-center items-center m-20">
-              <button onClick={handleButtonClick}>Open Authentication Form</button>
+              <div className="flex justify-center items-center m-20 space-x-4">
+              <Button variant="contained" onClick={handleButtonClick}>
+                    GOOGLE SIGN IN
+                  </Button>
                 {status==="idle" && (
                   <button
                     onClick={() => {
@@ -281,7 +283,7 @@ const handleMediaUpload = async (mediaBlobUrl) => {
                     className="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                   >
                    
-                    Start Recording
+                    Start Recording ⇢
                   </button>
                 )}
                 {recording && (
@@ -299,10 +301,10 @@ const handleMediaUpload = async (mediaBlobUrl) => {
                 {status === "stopped" && mediaBlobUrl && (
                   <>
                   <Button variant="contained" onClick={() => handleDownload(mediaBlobUrl)}>
-                    Download Recorded Media
+                    Download 
                   </Button>
                   <Button variant="contained" onClick={() => handleMediaUpload(mediaBlobUrl)}>
-                    Upload to Google Drive
+                    Upload to  Drive
                   </Button>
                 </>
                 )}
