@@ -3,7 +3,7 @@ import { ReactMediaRecorder } from "react-media-recorder";
 import { styled } from "@mui/system";
 import { useState, useEffect, useRef } from "react";
 import Button from '@mui/material/Button';
-import bgImage from "./bg.jpg";
+import bgImage from "./pages/Images/Intro1.jpg";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -13,17 +13,21 @@ const Container = styled("div")({
   justifyContent: "center",
   alignItems: "center",
   backgroundImage:`url(${bgImage})`,
-  
+  backgroundSize: "cover",
   height: "100vh",
+  padding: "3vw",
+  boxSizing: "border-box",
+  flexDirection: "column",
 });
 
 const VideoContainer = styled("div")({
-  width: "900px",
-  paddingTop: "395px", // 16:9 aspect ratio
+  width: "80vw",
+  paddingTop: "45vw", // 16:9 aspect ratio
   position: "relative",
   overflow: "hidden",
-  
-  backgroundColor: "rgba(173, 216, 230, 0.3)"
+  borderRadius: "10px",
+  backgroundColor: "rgba(173, 216, 230, 0.3)",
+  maxWidth: "100%",
 });
 
 const VideoElement = styled("video")({
@@ -33,6 +37,7 @@ const VideoElement = styled("video")({
   top: 0,
   left: 0,
   preload: "auto", 
+  borderRadius: "10px",
 });
 
 function AppComponent({ selectedMediaType,audioEnabled }) {
@@ -155,7 +160,7 @@ function AppComponent({ selectedMediaType,audioEnabled }) {
         onStart={handleStart}
         render={({ status, startRecording, stopRecording, mediaBlobUrl }) => (
           <Container>
-            <div>
+            
               <VideoContainer>
                 {mediaStream  && <VideoElement ref={videoRef} autoPlay />}
 
@@ -196,7 +201,6 @@ function AppComponent({ selectedMediaType,audioEnabled }) {
                 )}
                 <a ref={downloadLinkRef} style={{ display: "none" }} />
               </div>
-            </div>
             <ToastContainer />
           </Container>
         )}

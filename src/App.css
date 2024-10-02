@@ -1,5 +1,5 @@
-.background-intro{
-  background-image:url('./Images/Intro1.jpg');
+.background-home{
+  background-image:url('./pages/Images/Intro1.jpg');
   background-size: cover;
   height: 100vh;
   background-position: center;
@@ -8,6 +8,127 @@
   align-items: center; /* Center vertically */
   position: relative;
 }
+
+.background-home::before {
+  content: ""; /* Empty content for the pseudo-element */
+  position: absolute; /* Absolutely position it */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  bottom: 0; /* Align to the bottom */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  z-index: 1; /* Position it above the background but below the content */
+}
+
+.block-home {
+  position: relative; /* Positioning context for its children */
+  z-index: 2; /* Position it above the overlay */
+  text-align: center; /* Center the text */
+  color: black; /* Change text color for better visibility against the white overlay */
+  padding: 20px; /* Add some padding around the block */
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  max-width:90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.custom-border {
+  display: inline-block; /* Make it inline-block */
+  border-bottom: 4px solid black; /* Adjust the border as needed */
+}
+.block2-home {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+* {
+  box-sizing: border-box;
+}
+
+.Go-app {
+  background-color: #007bff; /* Initial blue background */
+  color: white; /* Text color */
+  border: none; /* No border */
+  padding: 10px 15px; /* Padding for the button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+.Go-app:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.settings-container {
+  width: 60vw; /* Better responsive width */
+  max-height: 80vh; /* Restrict height for overflow */
+  margin: 20px auto; /* Centering and spacing */
+   /* Ensure clean background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-radius: 10px; /* Rounded corners */
+  overflow-y: auto; /* Allow scrolling for overflow */
+  padding: 20px; /* Add internal spacing */
+  border:2px solid black;
+}
+.settings-header {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin: 20px 0;
+}
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.setting-text {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+}
+/* Custom scrollbar styling for WebKit browsers */
+.block-home::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  border-radius: 10px; /* Rounded corners for scrollbar */
+}
+
+.block-home::-webkit-scrollbar-thumb {
+  background-color:  grey; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for scrollbar thumb */
+}
+
+.block-home::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1); /* Color of the track (background) */
+  border-radius: 10px; /* Rounded corners for track */
+}
+
+/* Custom scrollbar styling for Firefox */
+.block-home {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color:grey rgba(0, 0, 0, 0.1); /* Thumb and track color */
+}
+
+
+
+
+
+
+
+
+
+
 .second-div  {
    /* background-image: url('./pexels-juanpphotoandvideo-1242348.jpg');*/
     height: 70%;
