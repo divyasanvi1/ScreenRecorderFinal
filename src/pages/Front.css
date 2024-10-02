@@ -1,0 +1,123 @@
+.background-intro{
+    background-image:url('./Images/Intro1.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    display: flex; /* Enable flexbox on the parent */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative;
+}
+
+.background-intro::before {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute; /* Absolutely position it */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Position it above the background but below the content */
+}
+
+.block {
+    position: relative; /* Positioning context for its children */
+    z-index: 2; /* Position it above the overlay */
+    text-align: center; /* Center the text */
+    color: black; /* Change text color for better visibility against the white overlay */
+    padding: 20px; /* Add some padding around the block */
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background with some transparency */
+    padding: 10px 20px; /* Padding around the navbar */
+    position: fixed; /* Keeps the navbar at the top */
+    width: 100%; /* Full width */
+    z-index: 10; /* Above other content */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+}
+
+.navbar-container {
+    display: flex; /* Flexbox layout for children */
+    justify-content: space-between; /* Space between logo and login button */
+    align-items: center; /* Center items vertically within the navbar */
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    color: #007bff; /* White color for the logo text */
+    font-size: 24px; /* Font size for logo */
+}
+
+.login-button {
+    background-color: #007bff; /* Initial blue background */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.block h1 {
+    font-family: 'Playfair Display', serif; /* Classy font for h1 */
+    font-size: 3rem;
+    color: #333;
+}
+.block h5 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.block p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.5;
+}
+.get-started {
+    background-color: #007bff; /* Initial blue background */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px;
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.get-started:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.nav-links {
+    display: flex; /* Flexbox for nav links */
+    align-items: center;
+    gap: 20px; /* Space between links */
+}
+
+.nav-link {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Font size for links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+    color: #007bff; /* Change color on hover */
+}
+.rate-github {
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid white;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
