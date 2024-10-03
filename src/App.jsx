@@ -21,12 +21,11 @@ function App() {
   const [selectedMediaType, setSelectedMediaType] = useState('video');
   const [audioEnabled, setAudioEnabled] = useState(false);
 
-
+  useDisableBackNavigation();
   return (
     
       <Router>
         <AuthProvider>
-        <useDisableBackNavigation />
         <Routes>
           <Route
             path="/"
