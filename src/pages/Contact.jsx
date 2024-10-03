@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import "./Front.css" // Import your CSS file for styling
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const ContactUs = () => {
   
     const email = "sanvidiv22@gmail.com";
+
+    const handleEmailClick = () => {
+      toast.info("Redirecting to email...");
+    };
   return (
     <div className="contact">
   <div className="block-contact">
@@ -20,7 +25,7 @@ const ContactUs = () => {
       </p>
     </div>
     <div className="contact-action">
-      <a href={`mailto:${email}`} className="login-button">Send Email</a>
+      <a href={`mailto:${email}`} className="login-button" onClick={handleEmailClick}>Send Email</a>
     </div>
     <div className="additional-info">
       <h2 style={{ fontSize: '1.5rem', margin: '10px 0', color: 'black' }}>Stay Connected!</h2>
@@ -29,6 +34,7 @@ const ContactUs = () => {
       </p>
     </div>
   </div>
+  <ToastContainer />
 </div>
 
   );

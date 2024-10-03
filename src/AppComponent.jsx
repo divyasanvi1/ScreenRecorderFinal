@@ -282,15 +282,11 @@ const handleMediaUpload = async (mediaBlobUrl) => {
                 Home
               </Button>
                 {status==="idle" && (
-                  <button
-                    onClick={() => {
-                      startRecording();
-                    }}
-                    className="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                  >
-                   
-                    Start Recording ⇢
-                  </button>
+                  <Button variant="contained" onClick={() => {
+                    startRecording();
+                  }}>
+                  Start 🎥
+                </Button>
                 )}
                 {recording && (
                   <button
@@ -301,16 +297,16 @@ const handleMediaUpload = async (mediaBlobUrl) => {
                     }}
                     className="ml-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
                   >
-                    Stop Recording
+                    Stop 🎥
                   </button>
                 )}
                 {status === "stopped" && mediaBlobUrl && (
                   <>
                   <Button variant="contained" onClick={() => handleDownload(mediaBlobUrl)}>
-                    Download 
+                    Download 🎥
                   </Button>
                   <Button variant="contained" onClick={() => handleMediaUpload(mediaBlobUrl)}>
-                    Upload to  Drive
+                    Upload 🎥
                   </Button>
                 </>
                 )}

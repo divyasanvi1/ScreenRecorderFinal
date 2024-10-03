@@ -6,6 +6,7 @@ import { useAuth } from '../AuthProvider';
 const Login =() =>{
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
      //event state
      const[loading,setLoading]=useState(false);
@@ -29,6 +30,10 @@ const Login =() =>{
       }
      };
 
+     const togglePasswordVisibility = () => {
+      setIsPasswordVisible(!isPasswordVisible);
+    };
+
     return (
         <div className="background-signup">
           <div className="block-signup">
@@ -42,11 +47,26 @@ const Login =() =>{
                 onChange={(e)=>setEmail(e.target.value)}/>
               <br/>
               <label>Password</label>
-              <input type ="text" 
+              <input
+               type ={isPasswordVisible ? 'text' : 'password'}
               placeholder="Enter Password" 
               required 
               value={password} 
               onChange={(e)=>setPassword(e.target.value)}/>
+               <button
+          type="button"
+          className="password-toggle"
+          onClick={togglePasswordVisibility}
+          style={{
+            marginLeft: '10px',
+            padding: '5px',
+            border: 'none',
+            background: 'transparent',
+            cursor: 'pointer',
+          }}
+        >
+          {isPasswordVisible ? '👁️' : '🙈'}
+        </button>
               <br/>
               {error && <div className="error-msg">{error}</div>}
               <div className="submit-div">

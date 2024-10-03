@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./Front.css"
 const Signup = () => {
     const [name, setName] = useState("");
@@ -8,6 +10,7 @@ const Signup = () => {
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
     const navigate = useNavigate();
      const {signUp}=useAuth();
@@ -18,14 +21,21 @@ const Signup = () => {
 
         try {
             await signUp(email, password,name);
+            toast.success("Registration successful!");
             console.log('User signed in successfully');
             navigate('/');
         } catch (err) {
             setError(err.message);
+            toast.error(`Error: ${err.message}`);
         } finally {
             setLoading(false);
         }
     };
+
+
+    const togglePasswordVisibility = () => {
+        setIsPasswordVisible(!isPasswordVisible);
+      };
 
     return (
         <div className="background-signup">
@@ -52,12 +62,26 @@ const Signup = () => {
                 <br />
                 <label>Password</label>
                 <input
-                    type="password" // Changed to "password" for security
+                    type={isPasswordVisible ? 'text' : 'password'} // Changed to "password" for security
                     placeholder="Enter Password"
                     required
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
+                <button
+          type="button"
+          className="password-toggle"
+          onClick={togglePasswordVisibility}
+          style={{
+            marginLeft: '10px',
+            padding: '5px',
+            border: 'none',
+            background: 'transparent',
+            cursor: 'pointer',
+          }}
+        >
+          {isPasswordVisible ? '👁️' : '🙈'}
+        </button>
                 <br />
                 {error && <div className="error-msg">{error}</div>}
                 <div className="submit-div">
@@ -70,6 +94,7 @@ const Signup = () => {
                 </div>
             </form>
             </div>
+            <ToastContainer />
         </div>
     );
 };
