@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./Front.css" // Import your CSS file for styling
+import "./Front.css";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const ContactUs = () => {

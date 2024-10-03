@@ -3,71 +3,71 @@
     background-size: cover;
     height: 100vh;
     background-position: center;
-    display: flex; /* Enable flexbox on the parent */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
     position: relative;
 }
 
 .background-intro::before {
-    content: ""; /* Empty content for the pseudo-element */
-    position: absolute; /* Absolutely position it */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    right: 0; /* Align to the right */
-    bottom: 0; /* Align to the bottom */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 1; /* Position it above the background but below the content */
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; 
 }
 
 .block {
-    position: relative; /* Positioning context for its children */
-    z-index: 2; /* Position it above the overlay */
-    text-align: center; /* Center the text */
-    color: black; /* Change text color for better visibility against the white overlay */
-    padding: 20px; /* Add some padding around the block */
+    position: relative; 
+    z-index: 2;
+    text-align: center; 
+    color: black;
+    padding: 20px; 
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark background with some transparency */
-    padding: 10px 20px; /* Padding around the navbar */
-    position: fixed; /* Keeps the navbar at the top */
-    width: 100%; /* Full width */
-    z-index: 10; /* Above other content */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 10px 20px; 
+    position: fixed;
+    width: 100%; 
+    z-index: 10; 
+    top: 0; 
+    left: 0;
 }
 
 .navbar-container {
-    display: flex; /* Flexbox layout for children */
-    justify-content: space-between; /* Space between logo and login button */
-    align-items: center; /* Center items vertically within the navbar */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .logo {
     font-family: 'Playfair Display', serif;
-    color: #007bff; /* White color for the logo text */
-    font-size: 24px; /* Font size for logo */
+    color: #007bff; 
+    font-size: 24px; 
 }
 
 .login-button {
-    background-color: #007bff; /* Initial blue background */
-    color: white; /* Text color */
-    border: none; /* No border */
-    padding: 10px 15px; /* Padding for the button */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    padding: 10px 15px; 
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.3s;
 }
 
 .login-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
 .block h1 {
-    font-family: 'Playfair Display', serif; /* Classy font for h1 */
+    font-family: 'Playfair Display', serif;
     font-size: 3rem;
     color: #333;
 }
@@ -82,44 +82,44 @@
     line-height: 1.5;
 }
 .get-started {
-    background-color: #007bff; /* Initial blue background */
-    color: white; /* Text color */
-    border: none; /* No border */
-    padding: 10px 15px; /* Padding for the button */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
     margin-top: 20px;
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    transition: background-color 0.3s;
 }
 
 .get-started:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
 .nav-links {
-    display: flex; /* Flexbox for nav links */
+    display: flex;
     align-items: center;
-    gap: 20px; /* Space between links */
+    gap: 20px;
 }
 
 .nav-link {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 18px; /* Font size for links */
-    transition: color 0.3s; /* Smooth transition for hover effect */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
 .nav-link:hover {
-    color: #007bff; /* Change color on hover */
+    color: #007bff;
 }
 .rate-github {
-    color: white; /* Text color */
-    border: none; /* No border */
-    padding: 10px 15px; /* Padding for the button */
-    border-radius: 5px; /* Rounded corners */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
     border: 2px solid white;
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
  
 .background-signup{
@@ -127,54 +127,54 @@
     background-size: cover;
     height: 100vh;
     background-position: center;
-    display: flex; /* Enable flexbox on the parent */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
 .background-signup::before {
-    content: ""; /* Empty content for the pseudo-element */
-    position: absolute; /* Absolutely position it */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    right: 0; /* Align to the right */
-    bottom: 0; /* Align to the bottom */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 1; /* Position it above the background but below the content */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .block-signup{
-    position: relative; /* Positioning context for its children */
-    z-index: 2; /* Position it above the overlay */
-    text-align: center; /* Center the text */
-    color: black; /* Change text color for better visibility against the white overlay */
-    padding: 20px; /* Add some padding around the block */
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: black;
+    padding: 20px;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
 }
 
 .background-signup .form {
-    width: 100%; /* 100% width to make the form flexible */
-    max-width: 500px; /* Max width for larger screens */
+    width: 100%;
+    max-width: 500px;
     border: 1px solid black;
     border-radius: 10px;
-    padding: 3vw; /* Use relative padding for responsiveness */
+    padding: 3vw;
     display: flex;
     flex-direction: column;
-    margin: 0 auto; /* Center the form horizontally */
+    margin: 0 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form input {
     min-height: auto;
-    padding: 12px; /* Larger padding for input fields */
+    padding: 12px;
     border: 1px solid black;
     background: transparent;
     transition: all 0.2s linear;
     display: block;
     width: 100%;
-    font-size: 1.1rem; /* Slightly larger font */
+    font-size: 1.1rem;
     font-weight: 400;
     line-height: 1.6;
     color: black ;
@@ -224,7 +224,7 @@
 
   @media (max-width: 768px) {
     .nav-link {
-        display: none; /* Hide About and Contact links on smaller screens */
+        display: none; 
     }
 }
 
@@ -233,54 +233,54 @@
     background-size: cover;
     height: 100vh;
     background-position: center;
-    display: flex; /* Enable flexbox on the parent */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
     position: relative;
 }
 
 .contact::before {
-    content: ""; /* Empty content for the pseudo-element */
-    position: absolute; /* Absolutely position it */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    right: 0; /* Align to the right */
-    bottom: 0; /* Align to the bottom */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 1; /* Position it above the background but below the content */
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    right: 0; 
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1; 
 }
 
 .block-contact {
-    position: relative; /* Positioning context for its children */
-    z-index: 2; /* Position it above the overlay */
-    text-align: center; /* Center the text */
-    color: black; /* Change text color for better visibility */
-    padding: 40px; /* Add more padding for better spacing */
-    background-color: rgba(255, 255, 255, 0.7); /* Slightly more opaque background */
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: black;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
-    max-width: 500px; /* Limit the width of the block */
-    width: 90%; /* Make it responsive */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 
 
 .contact-info {
-    font-size: 1.2rem; /* Adjust font size for contact info */
-    margin-bottom: 20px; /* Space below contact info */
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 .email-button {
-    display: inline-block; /* Make it behave like a button */
-    background-color: #007bff; /* Initial blue background */
-    color: white; /* Text color */
-    padding: 12px 20px; /* Padding for the button */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-    font-size: 1rem; /* Adjust font size for button */
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-size: 1rem;
 }
 
 .email-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
