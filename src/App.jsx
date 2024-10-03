@@ -14,14 +14,12 @@ import Forget from './password/Forget.jsx'
 import Recover from './password/Recover.jsx'
 import AboutUs from './pages/About.jsx';
 import ContactUs from './pages/Contact.jsx';
-import useDisableBackNavigation from './useDisableBackNavigation.jsx';
-
 
 function App() {
   const [selectedMediaType, setSelectedMediaType] = useState('video');
   const [audioEnabled, setAudioEnabled] = useState(false);
 
-  useDisableBackNavigation();
+
   return (
     
       <Router>
